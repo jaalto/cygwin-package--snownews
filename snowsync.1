@@ -1,0 +1,60 @@
+.\"                                      Hey, EMACS: -*- nroff -*-
+.\" First parameter, NAME, should be all caps
+.\" Second parameter, SECTION, should be 1-8, maybe w/ subsection
+.\" other parameters are allowed: see man(7), man(1)
+.TH snowsync 1 "May 4, 2005"
+.\" Please adjust this date whenever revising the manpage.
+.\"
+.\" Some roff macros, for reference:
+.\" .nh        disable hyphenation
+.\" .hy        enable hyphenation
+.\" .ad l      left justify
+.\" .ad b      justify to both left and right margins
+.\" .nf        disable filling
+.\" .fi        enable filling
+.\" .br        insert line break
+.\" .sp <n>    insert n+1 empty lines
+.\" for manpage-specific macros, see man(7)
+
+.SH NAME
+snowsync \- snownews subscription list syncing utility
+
+.SH SYNOPSIS
+.B snowsync
+.RI { command }
+
+.SH DESCRIPTION
+This manual page documents briefly the
+.B snowsync
+command.
+
+.PP
+.B snowsync
+is a PERL script that will sync the user's list of RSS subscriptions to and
+from a remote server.
+
+.SH COMMANDS
+.TP
+.B \-h, \-\-help
+Show a few brief usage examples.
+.TP
+.B delete
+Deletes the configuration stored on the remote server.
+.TP
+.B local
+Syncs the local configuration with the remote; that is the remote config is
+downloaded to the local one.
+.TP
+.B remote
+Syncs the remote configuration with the local; that is the local config is
+uploaded to the remote one.
+
+.SH SEE ALSO
+.BR snownews (1).
+.PP
+Documentation on setting up your own storage server online is available at:
+.RI < http://kiza.kcore.de/software/nwstorage/ >.
+
+.SH AUTHOR
+This manual page was written by Joe Nahmias <jello@debian.org>.
+

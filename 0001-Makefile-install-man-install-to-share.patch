@@ -1,0 +1,52 @@
+From 2755d474cb39e51b08d4cac7c77ba0a37ab36e31 Mon Sep 17 00:00:00 2001
+From: Jari Aalto <jari.aalto@cante.net>
+Date: Thu, 29 Nov 2007 03:00:04 +0200
+Subject: [PATCH] Makefile: (install-man): install to share
+
+Signed-off-by: Jari Aalto <jari.aalto@cante.net>
+---
+ Makefile |   18 +++++++++---------
+ 1 files changed, 9 insertions(+), 9 deletions(-)
+
+diff --git a/Makefile b/Makefile
+index 4610992..30f5547 100644
+--- a/Makefile
++++ b/Makefile
+@@ -75,25 +75,25 @@ install-locales: locales
+ 	done
+ 
+ install-man: manpages
+-	if [ ! -d "$(DESTDIR)$(PREFIX)/man/man1" ]; then \
+-		mkdir -p $(DESTDIR)$(PREFIX)/man/man1; \
++	if [ ! -d "$(DESTDIR)$(PREFIX)/share/man/man1" ]; then \
++		mkdir -p $(DESTDIR)$(PREFIX)/share/man/man1; \
+ 	fi
+-	$(INSTALL) -m 0644 $(MAN)/snownews.1 $(DESTDIR)$(PREFIX)/man/man1
+-	$(INSTALL) -m 0644 $(MAN)/opml2snow.1 $(DESTDIR)$(PREFIX)/man/man1
++	$(INSTALL) -m 0644 $(MAN)/snownews.1 $(DESTDIR)$(PREFIX)/share/man/man1
++	$(INSTALL) -m 0644 $(MAN)/opml2snow.1 $(DESTDIR)$(PREFIX)/share/man/man1
+ 	
+ 	for L in $(LANGS); do \
+ 		if [ ! -d "$(DESTDIR)$(PREFIX)/man/$$L/man1" ]; then \
+-			mkdir -p $(DESTDIR)$(PREFIX)/man/$$L/man1; \
++			mkdir -p $(DESTDIR)$(PREFIX)/share/man/$$L/man1; \
+ 		fi; \
+-		$(INSTALL) -m 0644 $(MAN)/$$L/snownews.1 $(DESTDIR)$(PREFIX)/man/$$L/man1; \
++		$(INSTALL) -m 0644 $(MAN)/$$L/snownews.1 $(DESTDIR)$(PREFIX)/share/man/$$L/man1; \
+ 	done
+ 
+ ### Cleanup ###
+ 
+ clean: clean-bin clean-locales clean-man
+-	rm -f platform_settings
+-	@echo ""
+-	@echo "Run ./configure before building again!"
++#	rm -f platform_settings
++#	@echo ""
++#	@echo "Run ./configure before building again!"
+ 
+ clean-bin:
+ 	rm -f snownews *.o
+-- 
+1.5.3.2.81.g17ed
+

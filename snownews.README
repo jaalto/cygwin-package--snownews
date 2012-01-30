@@ -1,0 +1,143 @@
+snownews
+------------------------------------------
+
+Text mode RSS/RDF newsreader
+
+This program does for RSS feeds what lynx does for web-browsing.
+Supports RSS 1.0 feeds that comply with the W3C RDF specification and
+also supports Radio Userland's RSS 0.91 and 2.0 versions.
+
+It also includes the following additional features:OA
+
+- HTTP proxy support
+- Correctly handles HTTP 301, 304, and gzip/deflate Content-Encodings.
+- Imports OPML (Outline Processor Markup Language) subscription lists
+- Fully customizable key bindings
+- Customizable color support
+
+In order to use snowsync(1), the XML/LibXSLT.pm module must be present.
+This module can be installed from http://cpan.perl.org/ or with from
+command line:
+
+  $ FTP_PASSIVE=1 perl -MCPAN -e 'install XML::LibXSLT'
+
+An example how to use the program:
+
+  $ snownews
+    a			Press a)dd and give an URL, like
+    http://www.nytimes.com/services/xml/rss/nyt/Business.xml
+
+Runtime requirements:
+  cygwin
+  libiconv2
+  libintl8
+  libncurses8
+  libxml2
+  perl
+  zlib
+
+Build requirements:
+  cygwin
+  libiconv2
+  libintl8
+  libncurses-devel
+  libxml2-devel
+  zlib
+
+Canonical homepage:
+  http://snownews.kcore.de
+  http://kiza.kcore.de/software/snownews
+  http://packages.debian.org/snownews
+
+Canonical download:
+  See above
+
+Version control repository:
+
+Mailing list:
+
+Forum / Wiki:
+  http://www.kcore.de/wiki/wiki?Snownews
+
+IRC channel:
+
+Upstream contact:
+  Author: Oliver Feiler <kiza@gmx.net>
+  Bugs: Oliver Feiler <kiza@gmx.net>
+
+License:
+  GPL
+
+Language:
+  C
+
+------------------------------------
+
+Build instructions:
+  You may need cygbuild.sourceforge.net to build *src.tar.bz2 archive
+  unpack snownews-1.5.7-1-src.tar.bz2
+    if you use setup to install this src package, it will be
+    unpacked under /usr/src automatically
+  cd /usr/src
+  ./snownews*.sh all
+
+This will create:
+  snownews-1.5.7-1.tar.bz2
+  snownews-1.5.7-1-src.tar.bz2
+
+-------------------------------------------
+
+Files included in the binary distro:
+
+usr/bin/opml2snow
+usr/bin/snow2opml -> /usr/src/build/build/snownews/snownews-1.5.7/.inst/usr/bin/opml2snow
+usr/bin/snownews.exe
+usr/bin/snowsync
+usr/man/de/man1/snownews.1
+usr/man/fr/man1/snownews.1
+usr/man/it/man1/snownews.1
+usr/man/man1/opml2snow.1
+usr/man/man1/snownews.1
+usr/man/nl/man1/snownews.1
+usr/man/ru_RU.KOI8-R/man1/snownews.1
+usr/share/doc/Cygwin/snownews-1.5.7.README
+usr/share/doc/snownews-1.5.7/AUTHOR
+usr/share/doc/snownews-1.5.7/COPYING
+usr/share/doc/snownews-1.5.7/CREDITS
+usr/share/doc/snownews-1.5.7/ChangeLog
+usr/share/doc/snownews-1.5.7/INSTALL
+usr/share/doc/snownews-1.5.7/README
+usr/share/doc/snownews-1.5.7/README.de
+usr/share/doc/snownews-1.5.7/README.patching
+usr/share/locale/de/LC_MESSAGES/snownews.mo
+usr/share/locale/es/LC_MESSAGES/snownews.mo
+usr/share/locale/fr/LC_MESSAGES/snownews.mo
+usr/share/locale/it/LC_MESSAGES/snownews.mo
+usr/share/locale/ja/LC_MESSAGES/snownews.mo
+usr/share/locale/nl/LC_MESSAGES/snownews.mo
+usr/share/locale/pl/LC_MESSAGES/snownews.mo
+usr/share/locale/pt_BR/LC_MESSAGES/snownews.mo
+usr/share/locale/ru/LC_MESSAGES/snownews.mo
+usr/share/locale/sl/LC_MESSAGES/snownews.mo
+usr/share/locale/zh_CN/LC_MESSAGES/snownews.mo
+usr/share/locale/zh_TW/LC_MESSAGES/snownews.mo
+
+------------------
+
+Port Notes:
+
+- ./configure is a perl script that generated include file
+  platform_settings for Makefile.
+- 0001-Makefile-install-bin-Fix-opml2snow-symlink.patch
+  converts absolute symlink (build dir) to relative symlink.
+- 0001-Makefile-install-man-install-to-share.patch
+  comments out the 'make clean' portion which
+  would delete generated platform_settings´, because that would
+  otherwise force to run ./configure again.
+- No manual pages for: snow2opml, snowsync. Copied from Debian.
+
+----- version 1.5.7-1 -----
+- Initial release, 2007-08-22 Jari Aalto
+
+Cygwin port maintained by: Jari Aalto <jari.aalto@cante.net>
+Copyright (C) 2007 Jari Aalto; Licenced under GPL v2 or later

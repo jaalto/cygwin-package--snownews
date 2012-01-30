@@ -1,0 +1,8 @@
+#  Just before make(1) is about to be run, this file is sourced
+#  these have been copied from platform_settings after running ./configure
+
+PREFIX=/usr
+
+CYGBUILD_CFLAGS="-Wall -Wno-format-y2k -O2 -DLOCALEPATH=\"\\\"/usr/share/locale\\\"\" -DOS=\"\\\"$(uname)\\\"\" $(xml2-config --cflags) -DSTATIC_CONST_ICONV"
+
+CYGBUILD_LDFLAGS="-lncurses $(xml2-config --libs) -lintl -liconv"
