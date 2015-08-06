@@ -1,2 +1,2 @@
 tag1: snownews
-  http://kiza.kcore.de/software/snownews/downloading.en pregexp:tar.gz file:snownews-1.5.0.tar.gz new: x:
+  http://kiza.kcore.de/software/snownews/downloading pregexp:tar.gz file:snownews-1.5.0.tar.gz new: x:
