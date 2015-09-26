@@ -5,4 +5,4 @@ PREFIX=/usr
 
 CYGBUILD_CFLAGS="-Wall -Wno-format-y2k -O2 -DLOCALEPATH=\"\\\"/usr/share/locale\\\"\" -DOS=\"\\\"$(uname)\\\"\" $(xml2-config --cflags) -DSTATIC_CONST_ICONV"
 
-CYGBUILD_LDFLAGS="-lncurses $(xml2-config --libs) -lintl -liconv"
+CYGBUILD_LDFLAGS="-lncurses $(xml2-config --libs) -lintl -liconv -lssl -lcrypto"
