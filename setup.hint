@@ -3,4 +3,4 @@ ldesc: "This program does for RSS feeds what lynx does for web-browsing.
 Supports RSS 1.0 feeds that comply with the W3C RDF specification and
 also supports Radio Userland's RSS 0.91 and 2.0 versions."
 category: Web
-requires: libintl8 libncurses8 libxml2 perl perl-XML-LibXML zlib
+requires: libintl8 libiconv2 libncursesw10 libopenssl100 libxml2 perl perl-XML-LibXML zlib0
