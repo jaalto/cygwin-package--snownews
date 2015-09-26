@@ -28,19 +28,20 @@ An example how to use the program:
     http://www.nytimes.com/services/xml/rss/nyt/Business.xml
 
 Runtime requirements:
-  cygwin
   libiconv2
   libintl8
-  libncurses8
+  libncursesw10
+  libopenssl100
   libxml2
   perl
-  zlib
+  perl-XML-LibXML
+  zlib0
 
 Build requirements:
-  cygwin
+  quilt
   libiconv2
   libintl8
-  libncurses-devel
+  lbncursesw10-devel
   libxml2-devel
   zlib
 
@@ -126,15 +127,15 @@ usr/share/locale/zh_TW/LC_MESSAGES/snownews.mo
 
 Port Notes:
 
-- ./configure is a perl script that generated include file
-  platform_settings for Makefile.
+- ./configure is a perl script that generates include file
+  "platform_settings" for Makefile.
 - 0001-Makefile-install-bin-Fix-opml2snow-symlink.patch
   converts absolute symlink (build dir) to relative symlink.
 - 0001-Makefile-install-man-install-to-share.patch
   comments out the 'make clean' portion which
   would delete generated platform_settings´, because that would
   otherwise force to run ./configure again.
-- No manual pages for: snow2opml, snowsync. Copied from Debian.
+- No manual pages for snow2opml or snowsync. Copied from Debian.
 
 ----- version 1.5.7-1 -----
 - Initial release, 2007-08-22 Jari Aalto
