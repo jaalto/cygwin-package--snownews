@@ -76,52 +76,20 @@ Language:
 
 Build instructions:
   You may need cygbuild.sourceforge.net to build *src.tar.bz2 archive
-  unpack snownews-1.5.7-1-src.tar.bz2
+  unpack snownews-1.5.12-2-src.tar.bz2
     if you use setup to install this src package, it will be
     unpacked under /usr/src automatically
   cd /usr/src
   ./snownews*.sh all
 
 This will create:
-  snownews-1.5.7-1.tar.bz2
-  snownews-1.5.7-1-src.tar.bz2
+  snownews-1.5.12-2.tar.xz
+  snownews-1.5.12-2-src.tar.xz
 
 -------------------------------------------
 
 Files included in the binary distro:
-
-usr/bin/opml2snow
-usr/bin/snow2opml -> /usr/src/build/build/snownews/snownews-1.5.7/.inst/usr/bin/opml2snow
-usr/bin/snownews.exe
-usr/bin/snowsync
-usr/man/de/man1/snownews.1
-usr/man/fr/man1/snownews.1
-usr/man/it/man1/snownews.1
-usr/man/man1/opml2snow.1
-usr/man/man1/snownews.1
-usr/man/nl/man1/snownews.1
-usr/man/ru_RU.KOI8-R/man1/snownews.1
-usr/share/doc/Cygwin/snownews-1.5.7.README
-usr/share/doc/snownews-1.5.7/AUTHOR
-usr/share/doc/snownews-1.5.7/COPYING
-usr/share/doc/snownews-1.5.7/CREDITS
-usr/share/doc/snownews-1.5.7/ChangeLog
-usr/share/doc/snownews-1.5.7/INSTALL
-usr/share/doc/snownews-1.5.7/README
-usr/share/doc/snownews-1.5.7/README.de
-usr/share/doc/snownews-1.5.7/README.patching
-usr/share/locale/de/LC_MESSAGES/snownews.mo
-usr/share/locale/es/LC_MESSAGES/snownews.mo
-usr/share/locale/fr/LC_MESSAGES/snownews.mo
-usr/share/locale/it/LC_MESSAGES/snownews.mo
-usr/share/locale/ja/LC_MESSAGES/snownews.mo
-usr/share/locale/nl/LC_MESSAGES/snownews.mo
-usr/share/locale/pl/LC_MESSAGES/snownews.mo
-usr/share/locale/pt_BR/LC_MESSAGES/snownews.mo
-usr/share/locale/ru/LC_MESSAGES/snownews.mo
-usr/share/locale/sl/LC_MESSAGES/snownews.mo
-usr/share/locale/zh_CN/LC_MESSAGES/snownews.mo
-usr/share/locale/zh_TW/LC_MESSAGES/snownews.mo
+  See Cygwin package archive
 
 ------------------
 
@@ -137,8 +105,12 @@ Port Notes:
   otherwise force to run ./configure again.
 - No manual pages for snow2opml or snowsync. Copied from Debian.
 
+----- version 1.5.12-2 -----
+- Updated dependencies.
+  https://cygwin.com/ml/cygwin-apps/2015-09/msg00048.html
+
 ----- version 1.5.7-1 -----
 - Initial release, 2007-08-22 Jari Aalto
 
 Cygwin port maintained by: Jari Aalto <jari.aalto@cante.net>
-Copyright (C) 2007 Jari Aalto; Licenced under GPL v2 or later
+Copyright (C) 2007-2015 Jari Aalto; Licenced under GPL v2 or later
